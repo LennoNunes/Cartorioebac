@@ -64,8 +64,6 @@ int registro() //Função responsavel por cadastrar no sistema
 		fprintf(file,cargo);
 		fclose(file);
 		
-		
-		
 		printf("\n");
 		
 		system("pause");
@@ -102,6 +100,7 @@ int consulta() //Função a ser chamada
 			{
 				printf("%s", informacao);
 			}
+			
 		printf("\n\n");	
 		system("pause");
 		
@@ -158,7 +157,8 @@ int main()// Função Menu
 				printf("Escolha a opção desejada do meno:\n\n");
 				printf("\t1 - Registrar usuários\n");
 				printf("\t2 - Consultar usuários\n");
-				printf("\t3 - Deletar usuários\n\n"); 
+				printf("\t3 - Deletar usuários\n"); 
+				printf("\t4 - Sair do sistema\n\n");
 				printf("Opção: "); 
 				//Final do menu
 			
@@ -184,6 +184,11 @@ int main()// Função Menu
 						
 						case 3:	
 							deletar();
+						break;
+						
+						case 4:
+							printf("Obrigado por usar o sistema!\n");
+							return 0;
 						break;
 						
 						default:
