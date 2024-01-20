@@ -150,75 +150,75 @@ int main()// Função Menu
 		//Fim da variaveis
 		for(laco2=2;laco2=2;)
 			{
-		printf("### Cartorio da EBAC ###\n\n"); 
-		printf("Login de administrador:\n\nDigite sua senha: ");
-		scanf("%s",senhaDigitada);
-		
-		comparacao = strcmp(senhaDigitada, "admin");
-		
-		if(comparacao == 0)
-			{
-				system("cls");
-				for(laco1=1;laco1=1;) //Operador de repetição
+				printf("### Cartorio da EBAC ###\n\n"); 
+				printf("Login de administrador:\n\nDigite sua senha: ");
+				scanf("%s",senhaDigitada);
+				
+				comparacao = strcmp(senhaDigitada, "admin");
+				
+				if(comparacao == 0)
 					{
-						system("cls"); //Limpar a tela
-					
-						setlocale(LC_ALL, "Portuguese"); //Desfinindo a linguagem
-					
-						//Inicio do menu
-						printf("### Cartorio da EBAC ###\n\n"); 
-						printf("Escolha a opção desejada do meno:\n\n");
-						printf("\t1 - Registrar usuários\n");
-						printf("\t2 - Consultar usuários\n");
-						printf("\t3 - Deletar usuários\n"); 
-						printf("\t4 - Sair do sistema\n\n");
-						printf("Opção: "); 
-						//Final do menu
-					
-						//"\n" = Pular uma linha 
-						//"\t" = Espaçamento de primeira linha
-						
-						//"%d" = Escolha
-					
-						scanf("%d", &opcao); //Armazenando a escolha do usuario
-					
-						system("cls"); //Limpar a tela
-						
-						
-						switch(opcao) //Inicio da seleção
+						system("cls");
+						for(laco1=1;laco1=1;) //Operador de repetição
 							{
-								case 1: //Chamada do registro
-									registro();
-								break;
+								system("cls"); //Limpar a tela
+							
+								setlocale(LC_ALL, "Portuguese"); //Desfinindo a linguagem
+							
+								//Inicio do menu
+								printf("### Cartorio da EBAC ###\n\n"); 
+								printf("Escolha a opção desejada do meno:\n\n");
+								printf("\t1 - Registrar usuários\n");
+								printf("\t2 - Consultar usuários\n");
+								printf("\t3 - Deletar usuários\n"); 
+								printf("\t4 - Sair do sistema\n\n");
+								printf("Opção: "); 
+								//Final do menu
+							
+								//"\n" = Pular uma linha 
+								//"\t" = Espaçamento de primeira linha
 								
-								case 2:
-									consulta();
-								break;
+								//"%d" = Escolha
+							
+								scanf("%d", &opcao); //Armazenando a escolha do usuario
+							
+								system("cls"); //Limpar a tela
 								
-								case 3:	
-									deletar();
-								break;
 								
-								case 4:
-									printf("\nObrigado por usar o sistema!\n");
-									return 0;
-								break;
+								switch(opcao) //Inicio da seleção
+									{
+										case 1: //Chamada do registro
+											registro();
+										break;
+										
+										case 2:
+											consulta();
+										break;
+										
+										case 3:	
+											deletar();
+										break;
+										
+										case 4:
+											printf("### Cartorio da EBAC ###\n\n");
+											printf("Obrigado por usar o sistema!\n");
+											return 0;
+										break;
+										
+										default:
+											printf("Essa opção não está disponivel!\n\n");
+											system("pause");
+										break;	
+									} //Fim da seleção
 								
-								default:
-									printf("Essa opção não está disponivel!\n\n");
-									system("pause");
-								break;	
-							} //Fim da seleção
-						
+							}
 					}
-			}
-		else
-			{
-				
-				printf("\nSenha incorreta!\n");	
-				
-			}
-			system("cls");
+				else
+					{	
+						printf("\nSenha incorreta!\n");		
+					}
+					
+				system("cls");
 			}
 			
 		
